@@ -118,6 +118,13 @@ a:hover::after {
 @media print {
     body {
         background: white;
+        color: black; /* Garante que o texto base seja preto */
+    }
+
+    /* Remove a cor azul e o sublinhado de todos os links */
+    a, a:visited {
+        text-decoration: none;
+        color: black; 
     }
 
     .container {
