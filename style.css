@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
+    background: #181029;
     color: #222;
 }
 
@@ -15,6 +15,7 @@ body {
     margin: 40px auto;
     background: #fff;
     padding: 50px;
+    border-radius: 15px;
 }
 
 /* Cabeçalho */
@@ -82,6 +83,36 @@ li {
     margin-bottom: 4px;
     font-size: 14px;
 }
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: linear-gradient(90deg, #1a73e8, #6a11cb);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  color: #6a11cb;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
 
 /* Ajuste para impressão */
 @media print {
